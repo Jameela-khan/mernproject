@@ -5,6 +5,7 @@ const connectDatabase = () => {
     .connect(process.env.DB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useFindAndModify : false,
       useCreateIndex: true,
     })
     .then((data) => {
